@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream font-sans text-[18px] leading-relaxed text-ink antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+  /* tiny breakpoint helper used in the sticky header */
+  @media (min-width: 400px) {
+    .xs\:inline {
+      display: inline;
+    }
+  }
+}
+
+@layer components {
+  /* Yellow marker-highlight on the phrases that matter most */
+  .marker {
+    background: linear-gradient(180deg, transparent 55%, #ffe27a 55%);
+    padding: 0 0.15em;
+    font-weight: 700;
+    color: #13233b;
+  }
+  .marker-blue {
+    background: linear-gradient(180deg, transparent 55%, rgba(0, 94, 184, 0.22) 55%);
+    padding: 0 0.15em;
+    font-weight: 700;
+  }
+  /* subtle dotted health pattern for blue section backgrounds */
+  .dot-grid {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1.2px, transparent 1.2px);
+    background-size: 22px 22px;
+  }
+  .eyebrow {
+    @apply mb-3 inline-flex items-center gap-2 rounded-full bg-who-blue px-4 py-1.5 text-xs font-bold uppercase tracking-[0.12em] text-white;
+  }
+  /* Magazine drop-cap for the lead paragraph */
+  .dropcap::first-letter {
+    @apply font-serif font-bold text-who-blue;
+    font-size: 3.4rem;
+    line-height: 0.8;
+    float: left;
+    margin: 0.1em 0.12em 0 0;
+  }
+  .section {
+    @apply mx-auto max-w-3xl px-5 py-12 sm:py-16;
+  }
+  .section-wide {
+    @apply mx-auto max-w-5xl px-5 py-12 sm:py-16;
+  }
+  .lead {
+    @apply text-[1.18rem] leading-[1.75] text-ink/90;
+  }
+  .kicker {
+    @apply mb-3 inline-block rounded-full border border-who-blue/30 bg-who-blue/10 px-4 py-1 text-sm font-bold uppercase tracking-wide text-who-blue;
+  }
+}
