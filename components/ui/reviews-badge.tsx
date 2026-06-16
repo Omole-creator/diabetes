@@ -43,7 +43,7 @@ export default function ReviewsBadge({ className }: { className?: string }) {
             <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
           ))}
         </div>
-        <span className="text-xs font-semibold text-white">483 Reviews and Counting</span>
+        <span className="text-xs font-semibold text-white">917 Reviews and Counting</span>
       </div>
     </div>
   );
