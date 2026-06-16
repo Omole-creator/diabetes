@@ -21,3 +21,6 @@ make_bundle.py
 
 # Stray nested duplicate/backup of the project (contains PDFs) - do not publish
 /DIABETES/
+
+# Downloaded fonts for ad generation (re-downloadable, not source)
+/_adfonts/

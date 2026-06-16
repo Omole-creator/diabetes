@@ -16,7 +16,7 @@ export default function ReviewsBadge({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1.5 rounded-full bg-white/15 px-3 py-1.5 ring-1 ring-white/25 backdrop-blur",
+        "inline-flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1.5 rounded-full bg-cta-green px-3 py-1.5 shadow-lg shadow-cta-green/30 ring-1 ring-white/30",
         className,
       )}
     >
