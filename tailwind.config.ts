@@ -19,8 +19,9 @@ const config: Config = {
         ink: "#0E2233",
       },
       fontFamily: {
-        serif: ["var(--font-newsreader)", "Georgia", "serif"],
-        sans: ["var(--font-public)", "system-ui", "sans-serif"],
+        // Poppins everywhere (applied to both heading and body utilities)
+        serif: ["var(--font-poppins)", "system-ui", "sans-serif"],
+        sans: ["var(--font-poppins)", "system-ui", "sans-serif"],
       },
       keyframes: {
         pulseCta: {

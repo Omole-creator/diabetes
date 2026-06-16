@@ -14,6 +14,7 @@ import CTAButton from "@/components/CTAButton";
 import CountdownTimer from "@/components/CountdownTimer";
 import FAQ from "@/components/FAQ";
 import TestimonialGroup from "@/components/Testimonials";
+import ReviewsBadge from "@/components/ui/reviews-badge";
 import {
   REVIEWS,
   VALUE_STACK,
@@ -73,6 +74,9 @@ export default function Page() {
       <section className="hero relative overflow-hidden bg-who-blue text-white">
         <div className="dot-grid absolute inset-0 opacity-60" aria-hidden />
         <div className="relative mx-auto max-w-3xl px-5 py-16 text-center sm:py-24">
+          <div className="mb-12 flex justify-center animate-fade-up sm:mb-16">
+            <ReviewsBadge />
+          </div>
           <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white ring-1 ring-white/25 animate-fade-up">
             For Every Nigerian Told To Stop Eating Their Food
           </span>
