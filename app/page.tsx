@@ -486,10 +486,17 @@ export default function Page() {
             <p className="text-lg font-semibold text-ink/70">
               You will not pay {PRICE_ANCHOR} today.
             </p>
-            <p className="mt-2 text-ink/70">Get all three guides right now for just:</p>
+            <p className="mt-2 text-ink/70">
+              Not {PRICE_ANCHOR}. Not ₦15,000. Not even ₦10,000.
+            </p>
+            <p className="mt-3 text-ink/70">Get all three guides right now for just:</p>
             <p className="mt-1 font-serif text-6xl font-bold text-cta-green">{PRICE_TODAY}</p>
             <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-ink/60">
               One time payment · Instant download to your phone
+            </p>
+            <p className="mx-auto mt-4 max-w-md text-[1.02rem] leading-relaxed text-ink/75">
+              That is less than one trip to the hospital for what diabetes does when it is
+              left alone. You pay once and the three guides are yours to keep.
             </p>
 
             <div className="mt-7">
@@ -511,6 +518,20 @@ export default function Page() {
       {/* ───────────────────────── 9. URGENCY + GUARANTEE (Hormozi style, 90 day) ───────────────────────── */}
       <section className="bg-white">
         <div className="section">
+          <div className="mx-auto mb-9 max-w-2xl rounded-2xl border-l-4 border-who-blue bg-who-blue-tint p-6">
+            <p className="text-[1.12rem] font-semibold leading-relaxed text-ink">
+              Here is the hard part. Diabetes does not wait for you to decide.
+            </p>
+            <p className="mt-3 text-[1.08rem] leading-relaxed text-ink/85">
+              Every day you keep eating in fear, the tiredness stays, the night thirst stays,
+              the burning feet keep you awake, and the quiet damage to your eyes and kidneys
+              keeps going in the background.
+            </p>
+            <p className="mt-3 text-[1.08rem] leading-relaxed text-ink/85">
+              One quiet evening with this blueprint can start to turn that around tonight.
+            </p>
+          </div>
+
           <div className="rounded-2xl bg-who-blue p-7 text-center text-white">
             <p className="flex items-center justify-center gap-2 text-lg font-bold">
               <Clock className="h-5 w-5" /> This {PRICE_TODAY} price ends soon
@@ -570,12 +591,55 @@ export default function Page() {
             For {PRICE_TODAY}, you can stop eating in fear and start enjoying your own food again.
             Calm, steady, and satisfied. Both free toolkits land on your phone in minutes.
           </p>
+
+          {/* Two paths */}
+          <div className="mx-auto mt-9 grid max-w-3xl gap-4 text-left sm:grid-cols-2">
+            <div className="rounded-2xl bg-white/10 p-6 ring-1 ring-white/20">
+              <p className="text-sm font-bold uppercase tracking-wide text-white/70">Option one</p>
+              <p className="mt-2 text-[1.05rem] leading-relaxed text-white/90">
+                Change nothing. Keep eating in fear, keep sitting in the corner with your boiled
+                plantain, and watch the same numbers and the same worry follow you into next year.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-white p-6 ring-2 ring-cta-green">
+              <p className="text-sm font-bold uppercase tracking-wide text-cta-green">Option two</p>
+              <p className="mt-2 text-[1.05rem] leading-relaxed text-ink/85">
+                For {PRICE_TODAY}, learn the quiet way tonight and enjoy your eba, rice, and pounded
+                yam again. Calm sugar, full belly, and your strength coming back with it.
+              </p>
+            </div>
+          </div>
+
           <div className="mt-9">
             <CTAButton label={CTA_SECONDARY} sub={`All three guides · ${PRICE_TODAY} today`} testId="cta-final" />
           </div>
           <p className="mt-5 text-sm text-white/85">
             Instant download · Secure checkout on Selar · 90 day guarantee
           </p>
+        </div>
+      </section>
+
+      {/* ───────────────────────── PS ───────────────────────── */}
+      <section className="bg-cream">
+        <div className="section">
+          <div className="mx-auto max-w-2xl space-y-5">
+            <p className="text-[1.1rem] leading-relaxed text-ink/90">
+              <span className="font-serif font-bold text-ink">P.S.</span> Remember, it was never
+              the swallow. The food was never the enemy, only the way nobody taught you to enjoy it.
+              The Quiet Sugar Method fixes that, and at {PRICE_TODAY} it is the easiest yes you will
+              make this year. When the timer hits zero, the price goes back to {PRICE_ANCHOR}.
+            </p>
+            <p className="text-[1.1rem] leading-relaxed text-ink/90">
+              <span className="font-serif font-bold text-ink">P.P.S.</span> You risk nothing. Take
+              a full 90 days, do the simple steps, and if your sugar is not calmer you get back every
+              naira and still keep all three guides. The risk is all mine, not yours.
+            </p>
+            <p className="text-[1.1rem] leading-relaxed text-ink/90">
+              <span className="font-serif font-bold text-ink">P.P.P.S.</span> Your food, your sleep,
+              and your strength are waiting for you tonight. The only way to lose from here is to
+              close this page and let another year pass eating in fear.
+            </p>
+          </div>
         </div>
       </section>
 
