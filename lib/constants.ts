@@ -113,6 +113,14 @@ export const FAQS: { q: string; a: string }[] = [
     a: "No. That is the whole point. You use the same eba, rice, beans, soup and vegetables from your normal market. No costly products. No new drugs.",
   },
   {
+    q: "How soon will I see a change?",
+    a: "Many people notice steadier numbers and more energy within the first week or two of doing the steps. Some take a little longer, because bodies are different. What matters is that you start tonight and keep your doctor in the loop.",
+  },
+  {
+    q: "Why is it so cheap? What is the catch?",
+    a: "There is no catch. It is a digital download, so there is no printing, no delivery, no shop rent added on top. The low price is on purpose, so it can reach as many Nigerian homes as possible. You pay once and keep all three guides for life.",
+  },
+  {
     q: "How do I get it after I pay?",
     a: "Instantly. The moment your payment is confirmed on Selar, you download all three guides straight to your phone. No waiting, no delivery man.",
   },

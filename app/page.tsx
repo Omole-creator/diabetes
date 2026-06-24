@@ -26,11 +26,11 @@ import {
 } from "@/lib/constants";
 
 const MAIN_BULLETS = [
-  "The two minute trick with leftover rice that can make yesterday's rice kinder to your sugar than the hot one fresh from the pot. Almost no Nigerian knows this one.",
-  "Why the order you put food in your mouth can matter more than the food itself, and the small change that keeps your sugar flat after eating.",
+  "A two minute trick that makes your favourite rice far kinder to your sugar, without touching the rice itself. Almost no Nigerian has heard this one.",
+  "Why one small change at the table can matter more than the food on your plate, and how it keeps your sugar flat long after you eat.",
   "The everyday Nigerian food, sold on every street, that fills you up for hours while your sugar barely moves. You are probably ignoring it right now.",
   "The kind of soup that quietly works for your sugar while you enjoy it. You may have cooked it this week without knowing.",
-  "A ten minute habit after meals that turns your food into energy instead of a spike, and you can do it without leaving your compound.",
+  "A ten minute habit after meals that turns your food into steady energy instead of a spike, and you can do it without leaving your house.",
   "The free drink already in your house that steadies your sugar all day, and the sweet ones quietly pushing it up.",
   "How to know, in two simple checks, exactly which of your favourite meals love your body and which ones betray you.",
   "Your first seven days laid out one small step at a time, so you are never confused about what to do next.",
@@ -84,17 +84,17 @@ export default function Page() {
           <h1 className="mt-6 animate-fade-up font-serif font-bold leading-[1.05]">
             <span className="block text-4xl text-white/90 sm:text-5xl">Finally.</span>
             <span className="mt-2 block text-3xl sm:text-[2.7rem]">
-              How To Enjoy Your Eba, Rice, And Pounded Yam Again
+              Enjoy Your Eba, Rice, And Pounded Yam Again
             </span>
             <span className="mt-3 block text-2xl font-medium italic text-white sm:text-3xl">
-              without your blood sugar spiking like a rocket.
+              without your sugar spiking, using one quiet change most Nigerians have never been told.
             </span>
           </h1>
 
           <p className="mx-auto mt-7 max-w-2xl animate-fade-up text-[1.2rem] leading-relaxed text-white/90">
-            A Nigerian doctor shows you the quiet way to keep your sugar calm and steady, using the
-            same food already in your kitchen. No special diabetic food. No new drugs. No starving on
-            plain oats.
+            A Nigerian doctor reveals the quiet way to keep your sugar calm, using the same food
+            already in your kitchen. No special diabetic food. No new drugs. No starving on plain
+            oats.
           </p>
 
           <div className="mt-9 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm font-semibold text-white/90">
@@ -178,7 +178,7 @@ export default function Page() {
               You did not do anything wrong. Nobody ever showed you another way.
             </span>
           </P>
-          <P>Today, I will.</P>
+          <P>Today I will. And it starts with one thing nobody told you about your own food.</P>
         </div>
       </section>
 
@@ -207,34 +207,51 @@ export default function Page() {
           />
 
           <P>
-            Almost all the diabetes advice you have heard was not made for Nigerian food. It was
-            made for bread, pasta, and potato. For people who have never touched eba.
-          </P>
-          <P>So it tells you to drop your food. And no human being can keep that for long.</P>
-          <P>
-            You try. You suffer on plain oats. Then one evening the hunger wins, you eat your
-            swallow, and your sugar climbs all over again.
+            Almost every diabetes advice you have heard was not built for Nigerian food. It was
+            built for bread, pasta, and potato. For people who have never touched eba.
           </P>
           <P>
-            <span className="font-semibold text-ink">It was never your fault.</span> You were
-            following advice that was never meant for you.
+            It is easier to copy oyibo advice than to write one for our own plates. So nobody did.
+            You were handed a map drawn for a different country, then blamed for getting lost.
+          </P>
+          <P>So the advice says one thing: drop your food. No human being can keep that for long.</P>
+          <P>
+            You try. You suffer on plain oats. Then one evening hunger wins, you eat your swallow,
+            and your sugar climbs again.
+          </P>
+          <P>
+            You blame yourself. You should not.{" "}
+            <span className="font-semibold text-ink">It was never your fault.</span>
           </P>
 
           <div className="mt-8 rounded-2xl border-l-4 border-who-blue bg-who-blue-tint p-6">
             <P>
-              <span className="marker-blue">It was never the swallow.</span>
+              <span className="marker-blue">It was never the swallow itself.</span>
             </P>
             <P>
-              There are quiet things you can do to your eba, your rice, and your pounded yam, before
-              and even after you eat them, that decide whether your sugar jumps or stays calm.
+              The same plate of eba can enter your body two completely different ways. One floods
+              your blood and your meter screams. The other barely stirs it.
             </P>
-            <P>Not eating less of them. Not cutting them away.</P>
-            <P>Small, simple things most Nigerians have never been told.</P>
+            <P>Same food. Same plate. Two different endings.</P>
             <P>
-              Put together, they are called{" "}
-              <span className="marker">The Quiet Sugar Method.</span>
+              And the difference is not how much you eat. It is a few quiet things around the meal
+              that almost no Nigerian has ever been shown.
             </P>
           </div>
+
+          <P>
+            These are not punishments. Not plain oats. Not measuring tiny portions on a weighing
+            scale.
+          </P>
+          <P>
+            They are simple moves you make before, during, and even after you eat your favourite
+            food, that decide whether your sugar jumps or stays calm.
+          </P>
+          <P>
+            Put together, they are called{" "}
+            <span className="marker">The Quiet Sugar Method.</span>
+          </P>
+          <P>And the whole thing fits in one short guide you can finish tonight.</P>
         </div>
       </section>
 
@@ -269,6 +286,15 @@ export default function Page() {
             up from the table full and satisfied.
           </P>
 
+          <div className="mt-8 rounded-2xl border-l-4 border-cta-green bg-white/70 p-6">
+            <P>
+              Picture the next family Sunday. The amala and ewedu come out, and this time you are at
+              the table with everybody, not in the corner.
+            </P>
+            <P>You eat. You enjoy it.</P>
+            <P>And two hours later, your meter still reads calm. That is the whole point of this.</P>
+          </div>
+
           {/* Author authority */}
           <div className="mt-10 flex flex-col items-center gap-5 rounded-2xl border border-who-blue/20 bg-white p-6 sm:flex-row sm:items-start">
             <img
@@ -288,6 +314,9 @@ export default function Page() {
               </p>
               <p className="mt-3 text-sm font-bold uppercase tracking-wide text-who-blue">
                 {AUTHOR.title}
+              </p>
+              <p className="mt-4 text-[1.05rem] font-semibold leading-relaxed text-ink">
+                Over 900 Nigerians have now used this quiet method to enjoy their own food again.
               </p>
             </div>
           </div>
@@ -495,13 +524,21 @@ export default function Page() {
               One time payment · Instant download to your phone
             </p>
             <p className="mx-auto mt-4 max-w-md text-[1.02rem] leading-relaxed text-ink/75">
-              That is less than one trip to the hospital for what diabetes does when it is
-              left alone. You pay once and the three guides are yours to keep.
+              That is less than one big plate of food at a nice spot, paid once and yours to keep for
+              life.
+            </p>
+            <p className="mx-auto mt-2 max-w-md text-[1.02rem] leading-relaxed text-ink/75">
+              And far less than one trip to the hospital for what diabetes does when it is left alone.
             </p>
 
             <div className="mt-7">
               <CTAButton label={CTA_PRIMARY} sub={`Yes, Send Me Everything For ${PRICE_TODAY}`} testId="cta-primary" />
             </div>
+
+            <p className="mx-auto mt-4 max-w-md text-[0.98rem] leading-relaxed text-ink/70">
+              Tap the green button, land on a secure Selar page, pay once, and all three guides
+              download to your phone in minutes.
+            </p>
 
             <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-semibold text-ink/70">
               <span className="flex items-center gap-1.5">
@@ -523,9 +560,11 @@ export default function Page() {
               Here is the hard part. Diabetes does not wait for you to decide.
             </p>
             <p className="mt-3 text-[1.08rem] leading-relaxed text-ink/85">
-              Every day you keep eating in fear, the tiredness stays, the night thirst stays,
-              the burning feet keep you awake, and the quiet damage to your eyes and kidneys
-              keeps going in the background.
+              Every day you wait, the tiredness stays. The night thirst stays. The burning feet keep
+              you awake.
+            </p>
+            <p className="mt-3 text-[1.08rem] leading-relaxed text-ink/85">
+              And the quiet damage to your eyes and kidneys keeps going in the background.
             </p>
             <p className="mt-3 text-[1.08rem] leading-relaxed text-ink/85">
               One quiet evening with this blueprint can start to turn that around tonight.
@@ -550,9 +589,11 @@ export default function Page() {
               The 90 Day, Keep Everything Guarantee
             </h3>
             <p className="mx-auto max-w-2xl text-[1.12rem] leading-relaxed text-ink/85">
-              Take a full 90 days. Read the blueprint and do the simple steps. If your sugar is not
-              calmer and you are not enjoying your own food again, just show me you did the steps and
-              I will send back every naira you paid.
+              Take a full 90 days. Read the blueprint and do the simple steps.
+            </p>
+            <p className="mx-auto max-w-2xl text-[1.12rem] leading-relaxed text-ink/85">
+              If your sugar is not calmer and you are not enjoying your own food again, just show me
+              you did the steps. I will send back every naira.
             </p>
             <p className="mx-auto max-w-2xl text-[1.12rem] font-semibold leading-relaxed text-ink">
               You even keep all three guides as my gift for trying. The only way to lose here is to
@@ -624,9 +665,9 @@ export default function Page() {
         <div className="section">
           <div className="mx-auto max-w-2xl space-y-5">
             <p className="text-[1.1rem] leading-relaxed text-ink/90">
-              <span className="font-serif font-bold text-ink">P.S.</span> Remember, it was never
-              the swallow. The food was never the enemy, only the way nobody taught you to enjoy it.
-              The Quiet Sugar Method fixes that, and at {PRICE_TODAY} it is the easiest yes you will
+              <span className="font-serif font-bold text-ink">P.S.</span> Remember, it was never the
+              swallow. The food was never your enemy, only the way nobody taught you to enjoy it. The
+              Quiet Sugar Method changes that, and at {PRICE_TODAY} it is the easiest yes you will
               make this year. When the timer hits zero, the price goes back to {PRICE_ANCHOR}.
             </p>
             <p className="text-[1.1rem] leading-relaxed text-ink/90">
