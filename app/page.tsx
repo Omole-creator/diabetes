@@ -80,11 +80,7 @@ export default function Page() {
           <div className="mb-12 flex justify-center animate-fade-up sm:mb-16">
             <ReviewsBadge />
           </div>
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white ring-1 ring-white/25 animate-fade-up">
-            Please Read This Before You Buy
-          </span>
-
-          <h1 className="mt-6 animate-fade-up font-serif font-bold leading-[1.08]">
+          <h1 className="animate-fade-up font-serif font-bold leading-[1.08]">
             <span className="block text-2xl font-medium text-white/85 sm:text-[1.7rem]">
               If you have Type 1 diabetes, please do not buy this.
             </span>
