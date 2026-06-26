@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 A single long-form **direct-response sales page** (Next.js App Router) for a Nigerian diabetes info-product: the guide "Eat Your Swallow Again" plus two bonuses ("...Burning Feet..." and "Strong Again"). It is one route (`/`) optimized for mobile and for deployment to Vercel. Checkout is an external Selar link, not an in-app payment flow.
 
+**Current angle (negative qualification).** The page opens with a hard "do not buy" to **Type 1** diabetics, then turns to the real avatar: **Type 2 people on tablets** (metformin, Daonil, Amaryl) or herbal products. Insulin/"the daily needle" is the villain and cost-of-inaction: tablets are "the window" the reader is racing to keep open. The named mechanism is **"The Slow Sugar Method"** (it was never the swallow, it is how fast food turns to sugar). `COPYWRITING.MD` (RMBC + Hormozi Grand Slam Offer) is the governing playbook for any copy change.
+
 ## Commands
 
 ```bash
@@ -25,8 +27,8 @@ Note: `@playwright/cli` (in devDependencies) is a separate agent tool and is unr
 
 ## Architecture
 
-- **`lib/constants.ts` is the single source of truth** for everything the owner changes: `CHECKOUT_URL` (the Selar link), prices (`PRICE_TODAY`/`PRICE_ANCHOR`), CTA labels, `VALUE_STACK`, the `REVIEWS` array, and `FAQS`. Edit copy/offer/pricing here, not scattered through JSX.
-- **`app/page.tsx`** assembles the whole page as a top-to-bottom sequence of `<section>` blocks (hero → pain → reviews → mechanism → solution reveal → benefits → reviews → screenshot → bonuses → offer/price → guarantee → reviews → FAQ → final CTA → footer). Section copy lives inline; the bullet arrays (`MAIN_BULLETS`, `BONUS1_BULLETS`, `BONUS2_BULLETS`) sit at the top of the file.
+- **`lib/constants.ts` is the single source of truth** for everything the owner changes: `CHECKOUT_URL` (the Selar link), prices (`PRICE_TODAY`/`PRICE_ANCHOR`), CTA labels, `AUTHOR`, `VALUE_STACK`, the `WHO_ITS_FOR`/`WHO_ITS_NOT_FOR` qualification lists, the `REVIEWS` array, and `FAQS`. Edit copy/offer/pricing here, not scattered through JSX.
+- **`app/page.tsx`** assembles the whole page as a top-to-bottom sequence of `<section>` blocks (hero → pain/lead → who-it's-for/not-for → reviews → mechanism → solution reveal → benefits → reviews → screenshot → bonuses → offer/price → urgency/guarantee → reviews → FAQ → final CTA → PS → footer). Section copy lives inline; the bullet arrays (`MAIN_BULLETS`, `BONUS1_BULLETS`, `BONUS2_BULLETS`) sit at the top of the file.
 - **`components/`** holds the reusable pieces: `CTAButton` (the only buy button), `CountdownTimer` and `FAQ` (both `"use client"`), `Testimonials` (`TestimonialGroup` + card), `StickyHeader`. Everything else is server components.
 - **Images** live in `public/images/` as lowercase names (the source assets in the repo root are the originals). The page uses plain `<img>` tags with explicit dimensions and `alt`.
 - Fonts are loaded via `next/font/google` in `app/layout.tsx`: **Newsreader** (serif headlines, `--font-newsreader`) and **Public Sans** (body, `--font-public`), wired into Tailwind's `font-serif`/`font-sans`.
@@ -51,8 +53,11 @@ Changes must keep these true or the suite fails:
 
 - **No em-dashes or en-dashes anywhere** in user-facing copy.
 - Avoid the word "real" (reads as AI-written).
+- **Plain words only.** No abstract metaphors. Banned: "plate", "doors" (say "food", "swallow", "your body"). Simple enough for a 6-year-old.
 - Refer to the products as a **blueprint / toolkit / guide**, never "ebook/book".
 - **Do not alter the exact product titles** stored in `VALUE_STACK`.
 - Keep paragraphs short (1–3 lines). Plain, human, Nigerian-context language.
 - Testimonials: two-part names, each from a **different Nigerian state** (no state repeats across the page).
-- The owner-facing "this is not a cure / keep your doctor in the loop" honesty lives in the FAQ, not a footer disclaimer.
+- **Do not reveal the guide's actual tactics** (e.g. "eat slowly", "small portions"). Bullets stay blind/curiosity-driven so the page makes the reader salivate to know what is inside.
+- **No "work with your doctor" caveat in the selling copy** (that honesty lives inside the guide). Per owner: the "this is not a cure" note has also been removed. Note this slightly raises Facebook health-ad disapproval risk.
+- **Run the finished copy through the `humanizer` skill before delivery** (COPYWRITING.MD §0.1.2), then run `npm run build` + `npx playwright test`.
