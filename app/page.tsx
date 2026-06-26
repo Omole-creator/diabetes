@@ -23,11 +23,14 @@ import {
   CTA_PRIMARY,
   CTA_SECONDARY,
   AUTHOR,
+  WHO_ITS_FOR,
+  WHO_ITS_NOT_FOR,
 } from "@/lib/constants";
+import { X } from "lucide-react";
 
 const MAIN_BULLETS = [
   "A two minute trick that makes your favourite rice far kinder to your sugar, without touching the rice itself. Almost no Nigerian has heard this one.",
-  "Why one small change at the table can matter more than the food on your plate, and how it keeps your sugar flat long after you eat.",
+  "Why one small change at the table can matter more than the food itself, and how it keeps your sugar flat long after you eat.",
   "The everyday Nigerian food, sold on every street, that fills you up for hours while your sugar barely moves. You are probably ignoring it right now.",
   "The kind of soup that quietly works for your sugar while you enjoy it. You may have cooked it this week without knowing.",
   "A ten minute habit after meals that turns your food into steady energy instead of a spike, and you can do it without leaving your house.",
@@ -78,21 +81,24 @@ export default function Page() {
             <ReviewsBadge />
           </div>
           <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.14em] text-white ring-1 ring-white/25 animate-fade-up">
-            For Every Nigerian Told To Stop Eating Their Food
+            Please Read This Before You Buy
           </span>
 
-          <h1 className="mt-6 animate-fade-up font-serif font-bold leading-[1.05]">
-            <span className="block text-4xl text-white/90 sm:text-5xl">Finally.</span>
-            <span className="mt-2 block text-3xl sm:text-[2.7rem]">
-              Enjoy Your Eba, Rice, And Pounded Yam Again
+          <h1 className="mt-6 animate-fade-up font-serif font-bold leading-[1.08]">
+            <span className="block text-2xl font-medium text-white/85 sm:text-[1.7rem]">
+              If you have Type 1 diabetes, please do not buy this.
             </span>
-            <span className="mt-3 block text-2xl font-medium italic text-white sm:text-3xl">
-              without your sugar spiking, using one quiet change most Nigerians have never been told.
+            <span className="mt-4 block text-3xl sm:text-[2.6rem]">
+              But if you are on tablets like metformin or Daonil, or on any herbal product, you can
+              enjoy your eba, rice, and pounded yam again.
+            </span>
+            <span className="mt-3 block text-xl font-medium italic text-white sm:text-2xl">
+              without your sugar spiking, and without waiting for the day they hand you the injection.
             </span>
           </h1>
 
           <p className="mx-auto mt-7 max-w-2xl animate-fade-up text-[1.2rem] leading-relaxed text-white/90">
-            A Nigerian doctor reveals the quiet way to keep your sugar calm, using the same food
+            A Nigerian doctor reveals the slow way to keep your sugar calm, using the same food
             already in your kitchen. No special diabetic food. No new drugs. No starving on plain
             oats.
           </p>
@@ -118,6 +124,16 @@ export default function Page() {
           <P>
             <span className="font-serif text-2xl font-bold text-ink">Dear Friend,</span>
           </P>
+          <P>
+            If you have Type 1 diabetes, I want you to close this page. I say it with respect. This
+            was not written for you, and I will not take your money for it.
+          </P>
+          <P>But if a doctor told you it is Type 2, then please stay with me.</P>
+          <P>
+            It does not matter if you take a tablet like metformin or Daonil, lean on herbal
+            products, or only manage it with your food.
+          </P>
+          <P>This was written for you, line by line.</P>
           <P>Do you remember the day they told you?</P>
           <P>
             “You have diabetes.” Then someone said the words that broke your heart. Stop the eba.
@@ -167,18 +183,68 @@ export default function Page() {
                 className="mb-4 h-44 w-full rounded-xl object-cover"
               />
               <p className="text-[1.05rem] leading-relaxed text-ink/85">
-                The quiet fear of where this road ends. The eyes. The kidneys. The bed in the ward
-                you have seen others lie in.
+                And the bigger fear. The day the tablets stop being enough, and they put you on the
+                daily injection. You have watched it happen to people you know.
               </p>
             </div>
           </div>
 
+          <P>
+            Here is the part nobody told you. Right now, while you are still on tablets, you are in
+            the window. Your body is still listening to you.
+          </P>
           <P>
             <span className="font-semibold text-ink">
               You did not do anything wrong. Nobody ever showed you another way.
             </span>
           </P>
           <P>Today I will. And it starts with one thing nobody told you about your own food.</P>
+        </div>
+      </section>
+
+      {/* ───────────────────────── 2b. WHO THIS IS FOR / NOT FOR ───────────────────────── */}
+      <section className="bg-cream">
+        <div className="section">
+          <div className="text-center">
+            <span className="eyebrow mx-auto block w-fit">Let Us Be Honest First</span>
+            <h2 className="mt-3 text-2xl font-bold text-ink sm:text-[2rem]">
+              This guide is not for everybody.
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-[1.08rem] leading-relaxed text-ink/75">
+              I would rather you keep your money than buy the wrong thing. So read these two lists
+              before you go further.
+            </p>
+          </div>
+
+          <div className="mt-9 grid gap-5 md:grid-cols-2">
+            <div className="rounded-2xl border border-red-200 bg-red-50 p-6">
+              <h3 className="font-serif text-xl font-bold text-ink">Please do not buy this if:</h3>
+              <ul className="mt-5 space-y-4">
+                {WHO_ITS_NOT_FOR.map((item, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-red-100">
+                      <X className="h-4 w-4 text-red-500" strokeWidth={3} />
+                    </span>
+                    <span className="text-[1.05rem] leading-relaxed text-ink/85">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-2xl border border-who-blue/25 bg-who-blue-tint p-6">
+              <h3 className="font-serif text-xl font-bold text-ink">This is for you if:</h3>
+              <ul className="mt-5 space-y-4">
+                {WHO_ITS_FOR.map((item, i) => (
+                  <li key={i} className="flex gap-3">
+                    <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-who-blue/10">
+                      <Check className="h-4 w-4 text-who-blue" strokeWidth={3} />
+                    </span>
+                    <span className="text-[1.05rem] leading-relaxed text-ink/85">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -211,7 +277,7 @@ export default function Page() {
             built for bread, pasta, and potato. For people who have never touched eba.
           </P>
           <P>
-            It is easier to copy oyibo advice than to write one for our own plates. So nobody did.
+            It is easier to copy oyibo advice than to write one for our own food. So nobody did.
             You were handed a map drawn for a different country, then blamed for getting lost.
           </P>
           <P>So the advice says one thing: drop your food. No human being can keep that for long.</P>
@@ -229,13 +295,13 @@ export default function Page() {
               <span className="marker-blue">It was never the swallow itself.</span>
             </P>
             <P>
-              The same plate of eba can enter your body two completely different ways. One floods
-              your blood and your meter screams. The other barely stirs it.
+              The same eba can turn to sugar inside your body two different ways. One way is fast,
+              and your meter screams. The other way is slow, and your sugar barely moves.
             </P>
-            <P>Same food. Same plate. Two different endings.</P>
+            <P>Same food. Same eba. Two different endings.</P>
             <P>
-              And the difference is not how much you eat. It is a few quiet things around the meal
-              that almost no Nigerian has ever been shown.
+              And the difference is not how much you eat. It is how fast that food turns to sugar,
+              and a few quiet things you do around the meal decide it.
             </P>
           </div>
 
@@ -249,7 +315,7 @@ export default function Page() {
           </P>
           <P>
             Put together, they are called{" "}
-            <span className="marker">The Quiet Sugar Method.</span>
+            <span className="marker">The Slow Sugar Method.</span>
           </P>
           <P>And the whole thing fits in one short guide you can finish tonight.</P>
         </div>
@@ -309,14 +375,15 @@ export default function Page() {
               <h3 className="font-serif text-xl font-bold text-ink">From the desk of {AUTHOR.name}</h3>
               <p className="mt-2 text-[1.08rem] leading-relaxed text-ink/85">
                 “I was tired of watching my own people lose their food, their feet, and their joy to
-                advice that was never made for them. So I put everything that works, tested and safe
-                and simple, into one small guide that a busy person can finish in one evening.”
+                advice that was never made for them. I watched too many move from one small tablet to
+                a daily needle, when there was still time to turn it around. So I put everything that
+                works, simple and safe, into one small guide a busy person can finish in one evening.”
               </p>
               <p className="mt-3 text-sm font-bold uppercase tracking-wide text-who-blue">
                 {AUTHOR.title}
               </p>
               <p className="mt-4 text-[1.05rem] font-semibold leading-relaxed text-ink">
-                Over 900 Nigerians have now used this quiet method to enjoy their own food again.
+                Over 900 Nigerians have now used this slow sugar method to enjoy their own food again.
               </p>
             </div>
           </div>
@@ -524,11 +591,10 @@ export default function Page() {
               One time payment · Instant download to your phone
             </p>
             <p className="mx-auto mt-4 max-w-md text-[1.02rem] leading-relaxed text-ink/75">
-              That is less than one big plate of food at a nice spot, paid once and yours to keep for
-              life.
+              That is less than one good meal at a nice spot, paid once and yours to keep for life.
             </p>
             <p className="mx-auto mt-2 max-w-md text-[1.02rem] leading-relaxed text-ink/75">
-              And far less than one trip to the hospital for what diabetes does when it is left alone.
+              And far less than what diabetes costs you once it pushes you onto the daily needle.
             </p>
 
             <div className="mt-7">
@@ -564,7 +630,8 @@ export default function Page() {
               you awake.
             </p>
             <p className="mt-3 text-[1.08rem] leading-relaxed text-ink/85">
-              And the quiet damage to your eyes and kidneys keeps going in the background.
+              And quietly, in the background, the window closes a little more. The window where
+              tablets are still enough, before the daily needle takes their place.
             </p>
             <p className="mt-3 text-[1.08rem] leading-relaxed text-ink/85">
               One quiet evening with this blueprint can start to turn that around tonight.
@@ -639,13 +706,13 @@ export default function Page() {
               <p className="text-sm font-bold uppercase tracking-wide text-white/70">Option one</p>
               <p className="mt-2 text-[1.05rem] leading-relaxed text-white/90">
                 Change nothing. Keep eating in fear, keep sitting in the corner with your boiled
-                plantain, and watch the same numbers and the same worry follow you into next year.
+                plantain, and let the window keep closing until the day they hand you the needle.
               </p>
             </div>
             <div className="rounded-2xl bg-white p-6 ring-2 ring-cta-green">
               <p className="text-sm font-bold uppercase tracking-wide text-cta-green">Option two</p>
               <p className="mt-2 text-[1.05rem] leading-relaxed text-ink/85">
-                For {PRICE_TODAY}, learn the quiet way tonight and enjoy your eba, rice, and pounded
+                For {PRICE_TODAY}, learn the slow way tonight and enjoy your eba, rice, and pounded
                 yam again. Calm sugar, full belly, and your strength coming back with it.
               </p>
             </div>
@@ -666,9 +733,9 @@ export default function Page() {
           <div className="mx-auto max-w-2xl space-y-5">
             <p className="text-[1.1rem] leading-relaxed text-ink/90">
               <span className="font-serif font-bold text-ink">P.S.</span> Remember, it was never the
-              swallow. The food was never your enemy, only the way nobody taught you to enjoy it. The
-              Quiet Sugar Method changes that, and at {PRICE_TODAY} it is the easiest yes you will
-              make this year. When the timer hits zero, the price goes back to {PRICE_ANCHOR}.
+              swallow. The food was never your enemy, only how fast nobody taught you to slow it
+              down. The Slow Sugar Method changes that, and at {PRICE_TODAY} it is the easiest yes you
+              will make this year. When the timer hits zero, the price goes back to {PRICE_ANCHOR}.
             </p>
             <p className="text-[1.1rem] leading-relaxed text-ink/90">
               <span className="font-serif font-bold text-ink">P.P.S.</span> You risk nothing. Take
@@ -676,9 +743,9 @@ export default function Page() {
               naira and still keep all three guides. The risk is all mine, not yours.
             </p>
             <p className="text-[1.1rem] leading-relaxed text-ink/90">
-              <span className="font-serif font-bold text-ink">P.P.P.S.</span> Your food, your sleep,
-              and your strength are waiting for you tonight. The only way to lose from here is to
-              close this page and let another year pass eating in fear.
+              <span className="font-serif font-bold text-ink">P.P.P.S.</span> While you are still on
+              tablets, the window is still open. Start tonight, and you give yourself the best chance
+              to stay far away from the daily needle. That alone is worth more than {PRICE_TODAY}.
             </p>
           </div>
         </div>

@@ -12,8 +12,26 @@ export const CTA_SECONDARY = "Get Instant Access Now";
 
 export const AUTHOR = {
   name: "Dr. Omole Kelvin",
-  title: "Author, The Quiet Sugar Method",
+  title: "Author, The Slow Sugar Method",
 };
+
+// ── Who this is for / not for (the qualification block) ───
+// Single source of truth for the disqualification angle. The
+// hard "no" to Type 1 builds trust. The tablet crowd is the
+// avatar. No doctor caveat here, that honesty lives in the guide.
+export const WHO_ITS_NOT_FOR = [
+  "You have Type 1 diabetes. This food method is not the answer for you, and I will not take your money for it.",
+  "You have already accepted that eba, rice and pounded yam are gone from your life for good. If you have made your peace with that, this is not for you.",
+  "You only want another long list of foods to avoid. This guide does the opposite of that, so it will not be what you expect.",
+];
+
+export const WHO_ITS_FOR = [
+  "You were told it is Type 2, and you are managing it with tablets like metformin, Daonil, Amaryl, or Glucophage.",
+  "You are not on any tablet yet. Maybe you lean on herbal products, or only on your food. You are early, and that is the best place of all to start from.",
+  "You still want to enjoy your eba, rice, and pounded yam, instead of living on boiled plantain and plain oats.",
+  "You can feel where this is heading, and you want to stay far away from the daily injection.",
+  "You want a simple way that uses the same food already in your kitchen, nothing strange, nothing costly.",
+];
 
 // Exact product titles (do not alter). Shown in the value stack.
 export const VALUE_STACK = [
@@ -101,12 +119,12 @@ export const FAQS: { q: string; a: string }[] = [
     a: "Yes. The steps are gentle and simple, and they work at any age. Many of the people using this are 60, 70 and above. You use your own market food, nothing hard, nothing strange.",
   },
   {
-    q: "Is this safe if I am on insulin or have Type 1?",
-    a: "The food steps are safe for everyone. But because eating this way can bring your sugar down, please keep your doctor in the loop and never stop or change your insulin or medicine on your own. Your doctor adjusts the dose. This blueprint adjusts how you eat.",
+    q: "I have Type 1 diabetes. Can I use this?",
+    a: "No, and I will be honest with you. This guide was written for people with Type 2 who are managing on tablets. If you have Type 1, this food method is not the answer for you, so please do not buy it.",
   },
   {
-    q: "Will this cure my diabetes?",
-    a: "No, and we will never lie to you. This is not a cure. It is a simple, steady way to keep your sugar calmer while you still enjoy the food you love, and keep working with your doctor.",
+    q: "I am on diabetes tablets like metformin or Daonil. Is this for me?",
+    a: "Yes. This is exactly who I wrote it for. If you are still on tablets, your body is still listening, and this is the best time to start the slow sugar steps and enjoy your food again.",
   },
   {
     q: "Do I need to buy special diabetic food?",
@@ -114,7 +132,7 @@ export const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "How soon will I see a change?",
-    a: "Many people notice steadier numbers and more energy within the first week or two of doing the steps. Some take a little longer, because bodies are different. What matters is that you start tonight and keep your doctor in the loop.",
+    a: "Many people notice steadier numbers and more energy within the first week or two of doing the steps. Some take a little longer, because bodies are different. What matters is that you start tonight.",
   },
   {
     q: "Why is it so cheap? What is the catch?",
