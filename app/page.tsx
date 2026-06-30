@@ -622,8 +622,7 @@ export default function Page() {
             People are paying for this right now, and getting it in minutes.
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-[1.1rem] leading-relaxed text-ink/80">
-            These are payments from other Nigerians, sent to us this week. Look at the first one. The
-            narration says “Books on diabetes reversal.”
+            These are payments from other Nigerians, sent to us this week.
           </p>
           <p className="mx-auto mt-3 max-w-2xl text-[1.1rem] leading-relaxed text-ink/80">
             Each person paid once, and within minutes the guide landed on their phone. No waiting. No
@@ -663,11 +662,6 @@ export default function Page() {
                 className="h-auto w-full rounded-2xl border border-ink/10 bg-white shadow-lg"
               />
             ))}
-            <div className="flex items-center justify-center rounded-2xl border-2 border-dashed border-cta-green/50 bg-white p-6">
-              <p className="font-serif text-xl font-bold leading-snug text-ink">
-                Your receipt could be the next one here.
-              </p>
-            </div>
           </div>
         </div>
       </section>
