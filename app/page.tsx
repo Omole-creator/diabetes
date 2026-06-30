@@ -614,6 +614,64 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ───────────────────────── 8b. PROOF OF REAL ORDERS + INSTANT DELIVERY ───────────────────────── */}
+      <section className="bg-who-blue-tint">
+        <div className="section-wide text-center">
+          <span className="eyebrow mx-auto block w-fit">Real Orders This Week</span>
+          <h2 className="mt-3 text-2xl font-bold text-ink sm:text-[2rem]">
+            People are paying for this right now, and getting it in minutes.
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-[1.1rem] leading-relaxed text-ink/80">
+            These are payments from other Nigerians, sent to us this week. Look at the first one. The
+            narration says “Books on diabetes reversal.”
+          </p>
+          <p className="mx-auto mt-3 max-w-2xl text-[1.1rem] leading-relaxed text-ink/80">
+            Each person paid once, and within minutes the guide landed on their phone. No waiting. No
+            story. You pay, and it is yours the same minute.
+          </p>
+
+          <div className="mx-auto mt-9 grid max-w-4xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                src: "/images/proof2.jpg",
+                alt: "A buyer pays ₦5,000, gets the download link in minutes, then says the book is easy to read and he will follow it",
+              },
+              {
+                src: "/images/proof1.jpg",
+                alt: "A FirstBank receipt for ₦5,000 with the narration 'Books on diabetes reversal', then the download link sent back",
+              },
+              {
+                src: "/images/proof3.jpg",
+                alt: "An OPay receipt for ₦5,000 for the guide, with the download link delivered straight after",
+              },
+              {
+                src: "/images/proof4.jpg",
+                alt: "A bank transfer of ₦5,000 for the guide, with the download link sent the same morning",
+              },
+              {
+                src: "/images/proof5.jpg",
+                alt: "A bank alert showing a ₦5,000 purchase of the guide, with the download link delivered right after",
+              },
+            ].map((shot) => (
+              <img
+                key={shot.src}
+                src={shot.src}
+                alt={shot.alt}
+                width={540}
+                height={1080}
+                loading="lazy"
+                className="h-auto w-full rounded-2xl border border-ink/10 bg-white shadow-lg"
+              />
+            ))}
+            <div className="flex items-center justify-center rounded-2xl border-2 border-dashed border-cta-green/50 bg-white p-6">
+              <p className="font-serif text-xl font-bold leading-snug text-ink">
+                Your receipt could be the next one here.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ───────────────────────── 9. URGENCY + GUARANTEE (Hormozi style, 90 day) ───────────────────────── */}
       <section className="bg-white">
         <div className="section">
